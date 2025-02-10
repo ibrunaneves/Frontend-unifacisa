@@ -316,22 +316,63 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
     .sidebar, .content {
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
+
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
     }
+
+    nav ul li {
+        display: inline-block;
+    }
+
     .content {
         flex-direction: column;
     }
+
     .section {
-        min-width: 100%;
+        min-width: 80%;
     }
+
     .services-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .project {
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .project img {
+        width: 80%;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .project a {
+        display: block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background: #ffcd82;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .project a:hover {
+        background: #ffad31;
     }
 }

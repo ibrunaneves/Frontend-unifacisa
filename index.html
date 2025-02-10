@@ -1,11 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto turma 4</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruna Neves - Desenvolvedora Full Stack</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    (function(){
+       emailjs.init("service_vs1z1yk"); /* Substituir pela PUBLIC KEY, por exemplo: emailjs.init("YOUR_PUBLIC_KEY") */
+    })();
+  </script>
+
+  <script defer src="script.js"></script>
+
 </head>
 <body>
-    <h1>Título</h1>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('about')">SOBRE</a></li>
+        <li><a href="#" onclick="showSection('resume')">RESUMO</a></li>
+        <li><a href="#" onclick="showSection('portfolio')">PROJETOS</a></li>
+        <li><a href="#" onclick="showSection('contact')">CONTATO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <img src="Imagens/Bruna.jpg" alt="Foto da Bruna Neves">
+      <h2>Bruna Neves</h2>
+      <p>Desenvolvedora Full Stack</p>
+      
+      <div class="contact-info">
+        <p><strong>Telefone:</strong> (83) 9 2000 4952</p>
+        <p><strong>Email:</strong> ibrunaneves@gmail.com</p>
+        <p><strong>Localização:</strong> Campina Grande - PB</p>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/ibrunaneves" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/ibrunaneves" target="_blank">LinkedIn</a>
+      </div>
+      <a href="curriculofullstackpdf.pdf" class="download-resume" download>Baixar currículo</a>
+    </aside>
+
+    <main class="content">
+      <section id="about" class="section active">
+        <h2>Sobre mim</h2>
+          Estudante de Análise e Desenvolvimento de Sistemas na Unifacisa em transição de carreira para a área de tecnologia. 
+          Buscando atuar como desenvolvedora fullstack e criar soluções funcionais e inovadoras que contribuam para a transformação digital.
+      
+        <div class="services-container">
+          <div class="service-box box1">
+            <h3>Habilidades Técnicas</h3>
+            <ul class="skills">
+              <li>Java &amp; Spring Boot</li>
+              <li>MySQL</li>
+              <li>Python</li>
+              <li>JavaScript, React &amp; Angular</li>
+              <li>HTML &amp; CSS</li>
+            </ul>
+          </div>
+      
+          <div class="service-box box2">
+            <h3>Soft Skills</h3>
+            <ul class="skills">
+              <li>Comunicação</li>
+              <li>Adaptabilidade</li>
+              <li>Pensamento analítico</li>
+              <li>Resolução de problemas</li>
+              <li>Trabalho em equipe</li>
+            </ul>
+          </div>
+      
+          <div class="service-box box3">
+            <h3>Desenvolvimento Web</h3>
+            <p>
+              Crio aplicações web completas, unindo Java, Spring Boot e banco de dados relacionais
+              no back-end com React ou Angular no front-end, resultando em projetos responsivos,
+              seguros e escaláveis que oferecem experiências modernas e eficientes ao usuário.
+            </p>
+          </div>
+      
+          <div class="service-box box4">
+            <h3>Back-end e Integração de Dados</h3>
+            <p>
+              Crio e integro APIs robustas em Java com Spring Boot, aplicando Programação Orientada a Objetos 
+              e banco de dados relacionais (MySQL) para entregar soluções completas e escaláveis, 
+              prontas para se conectar ao front-end.
+            </p>
+          </div>
+        </div>
+      </section>            
+
+      <section id="resume" class="section hidden">
+        <h2>Resumo</h2>
+        
+        <div class="info-box">
+          <h3>Educação</h3>
+          <p><strong>Análise e Desenvolvimento de Sistemas – Unifacisa</strong> (cursando)</p>
+          <p>
+            <strong>Jornalismo</strong>, com Especialização em Produção de Conteúdo para Mídias Digitais, Psicologia e Criminologia
+          </p>
+        </div>
+        
+        <div class="info-box orange">
+          <h3>Experiência</h3>
+          <p>
+            <strong>Produção de Conteúdo Digital:</strong> desenvolvimento de estratégias de comunicação para mídias sociais, criação de textos, 
+            vídeos e outras peças para diferentes plataformas.
+          </p>
+          <p>
+            <strong>Atendimento ao público e Desenvolvimento de soluções:</strong> experiência na interação com diversos perfis de clientes e 
+            aplicação de técnicas para melhorar o engajamento e a satisfação do usuário.
+          </p>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section hidden">
+        <h2>Projetos</h2>
+        <div class="project">
+          <img src="Imagens/coffeeathome.jpeg" alt="Projeto">
+          <p><b>Confira meus projetos e repositórios no GitHub.</b></p>
+          <a href="https://github.com/ibrunaneves" target="_blank">Ver no GitHub</a>
+        </div>
+      </section>
+
+      <section id="contact" class="section hidden">
+        <h2>Contato</h2>
+        <p>Aberta a oportunidades de aprendizado e colaboração! Entre em contato comigo:</p>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <textarea name="message" placeholder="Sua mensagem" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Bruna Neves. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
